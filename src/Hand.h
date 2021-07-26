@@ -1,13 +1,12 @@
-//
-// Created by Evgeniy Onishchenko on 026 26.07.21.
-//
-
 #pragma once
-
+#include <vector>
+#include "Card.h"
 class Hand {
-
+    std::vector<Card*> m_Cards;
+public:
+    void Add(Card* pCard);
+    void Clear();
+    int GetTotal();
 };
-
-
 
 
