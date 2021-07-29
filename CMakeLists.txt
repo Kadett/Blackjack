@@ -3,4 +3,4 @@ project(Blackjack)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Blackjack main.cpp src/Card.cpp src/Card.h src/Hand.cpp src/Hand.h)
+add_executable(Blackjack main.cpp src/Card.cpp src/Card.h src/Hand.cpp src/Hand.h src/GenericPlayer.cpp src/GenericPlayer.h)
