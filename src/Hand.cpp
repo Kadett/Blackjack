@@ -6,6 +6,7 @@ void Hand::Add(Card *pCard) {
 
 void Hand::Clear() {
     m_Cards.clear();
+    m_Cards.shrink_to_fit();
 }
 
 int Hand::GetTotal() {
