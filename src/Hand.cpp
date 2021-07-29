@@ -9,7 +9,7 @@ void Hand::Clear() {
     m_Cards.shrink_to_fit();
 }
 
-int Hand::GetTotal() {
+int Hand::GetTotal() const {
     int res{}, countAce{};
     const int ACE_ELEVEN = 11, ACE_ONE = 1;
     for (auto &v : m_Cards) {

@@ -6,7 +6,7 @@ class Hand {
 public:
     void Add(Card* pCard);
     void Clear();
-    int GetTotal();
+    int GetTotal() const;
 };
 
 
