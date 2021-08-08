@@ -1,12 +1,24 @@
 #pragma once
 #include <vector>
 #include "Card.h"
-class Hand {
-    std::vector<Card*> m_Cards{};
+class Hand
+{
 public:
-    void Add(Card* pCard);
-    void Clear();
-    int GetTotal() const;
-};
+    Hand();
+    // виртуальный деструктор
+    virtual ~Hand();
 
+    // добавляет карту в руку
+    void Add(Card* pCard);
+
+    // очищает руку от карт
+    void Clear();
+
+    //получает сумму очков карт в руке, присваивая тузу
+    // значение 1 или 11 в зависимости от ситуации
+    int GetTotal() const;
+
+protected:
+    std::vector<Card*> m_Cards;
+};
 

@@ -1,17 +1,23 @@
 #pragma once
-class Card {
+#include <iostream>
+class Card
+{
 public:
-    enum class suits {
-        HEART, DIAMOND, CLUB, SPADE
+    enum rank {
+        ACE = 1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN,
+        JACK, QUEEN, KING
     };
-    enum class rank{
-        ACE = 1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
-    };
-    Card(suits, rank);
+    enum suit { CLUBS, DIAMONDS, HEARTS, SPADES };
+
+    Card(rank r = ACE, suit s = SPADES, bool ifu = true);
+    int GetValue() const;
     void Flip();
-    int GetValue();
+    friend std::ostream& operator<<(std::ostream& os, const Card& aCard);
+
 private:
-    bool m_IsFaceUp{};
-    suits m_Suit;
     rank m_Rank;
+    suit m_Suit;
+    bool m_IsFaceUp;
 };
+
+
